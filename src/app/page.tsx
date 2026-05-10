@@ -1,61 +1,44 @@
-import { Hero } from "@/components/home/Hero";
-import { Features } from "@/components/home/Features";
-import { VisionSection } from "@/components/home/VisionSection";
+import { LandingNav } from "@/components/landing/LandingNav";
+import { LandingHero } from "@/components/landing/LandingHero";
+import { ProblemSection } from "@/components/landing/ProblemSection";
+import { InsightSection } from "@/components/landing/InsightSection";
+import { FeatureSection } from "@/components/landing/FeatureSection";
+import { HowItWorksSection } from "@/components/landing/HowItWorksSection";
+import { ImpactSection } from "@/components/landing/ImpactSection";
 import Link from "next/link";
-import { ArrowRight, BookOpen, Sparkles } from "lucide-react";
 
 export default function HomePage() {
   return (
-    <main className="bg-daye-bg">
-      {/* Nav */}
-      <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 rounded-full bg-daye-green flex items-center justify-center">
-            <Sparkles size={12} className="text-black" />
-          </div>
-          <span className="text-white font-bold text-lg tracking-tight">Daye</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link
-            href="/docs"
-            className="text-white/50 text-sm font-medium hover:text-white/80 transition-colors flex items-center gap-1.5"
-          >
-            <BookOpen size={14} />
-            Docs
-          </Link>
-          <Link href="/prototype">
-            <button className="flex items-center gap-2 px-5 py-2 rounded-full bg-white text-black text-sm font-semibold hover:bg-daye-green transition-colors">
-              Open Prototype
-              <ArrowRight size={13} />
-            </button>
-          </Link>
-        </div>
-      </nav>
-
-      <Hero />
-      <Features />
-      <VisionSection />
+    <main className="bg-black">
+      <LandingNav />
+      <LandingHero />
+      <ProblemSection />
+      <InsightSection />
+      <FeatureSection />
+      <HowItWorksSection />
+      <ImpactSection />
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-white/[0.06] bg-daye-bg">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-full bg-daye-green flex items-center justify-center">
-              <Sparkles size={10} className="text-black" />
+      <footer className="border-t border-white/[0.08] py-12 px-8">
+        <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-sp-green" />
+              <span className="text-white font-bold text-[15px]">DAYE</span>
+              <span className="text-sp-muted text-[13px]">— A Spotify Core Experience Concept</span>
             </div>
-            <span className="text-white/40 text-sm font-medium">Daye</span>
+            <p className="text-sp-muted text-[13px]">
+              Presented by a candidate for the Core Experience Product Manager role.
+            </p>
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/prototype" className="text-white/30 text-sm hover:text-white/60 transition-colors">
+            <Link href="/daye" className="text-sp-sub text-[14px] hover:text-white transition-colors">
               Prototype
             </Link>
-            <Link href="/docs" className="text-white/30 text-sm hover:text-white/60 transition-colors">
+            <Link href="/docs" className="text-sp-sub text-[14px] hover:text-white transition-colors">
               Documents
             </Link>
           </div>
-          <p className="text-white/20 text-xs font-mono">
-            The future of music is conversational.
-          </p>
         </div>
       </footer>
     </main>
