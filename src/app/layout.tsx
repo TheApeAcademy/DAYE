@@ -6,33 +6,19 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Daye — AI-Native Conversational DJ & Producer",
+  title: "DAYE — A Spotify Core Experience Concept",
   description:
-    "Daye is an AI-native music specialist that deeply understands music, emotion, and vibe. Tell it what you feel. It builds the session.",
-  keywords: ["AI music", "AI DJ", "conversational music", "Afrobeats", "Amapiano", "music intelligence"],
-  openGraph: {
-    title: "Daye — The Future of Music is Conversational",
-    description: "An AI-native conversational DJ & producer that deeply understands music, emotion, and vibe.",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Daye — AI-Native Conversational DJ",
-    description: "Tell it what you feel. It builds the session.",
-  },
+    "DAYE is an AI-native music intelligence system proposed as a native Spotify feature. A product concept for the Core Experience PM role.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="bg-daye-bg text-white antialiased">{children}</body>
+      <body className="bg-black text-white antialiased">{children}</body>
     </html>
   );
 }

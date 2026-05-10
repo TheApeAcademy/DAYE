@@ -9,62 +9,58 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        daye: {
-          bg: "#070707",
-          "surface-1": "#0F0F0F",
-          "surface-2": "#1A1A1A",
-          "surface-3": "#242424",
-          "surface-4": "#2E2E2E",
-          border: "rgba(255,255,255,0.06)",
-          green: "#1ED760",
-          purple: "#8B5CF6",
-          cyan: "#22D3EE",
-          amber: "#F59E0B",
-          rose: "#F43F5E",
+        sp: {
+          black: "#000000",
+          bg: "#121212",
+          elevated: "#1A1A1A",
+          card: "#282828",
+          hover: "#2a2a2a",
+          text: "#FFFFFF",
+          sub: "#B3B3B3",
+          muted: "#535353",
+          green: "#1DB954",
+          "green-bright": "#1ED760",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        sans: [
+          "var(--font-inter)",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Helvetica Neue",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
       },
       animation: {
-        "float-slow": "float 8s ease-in-out infinite",
-        "float-medium": "float 6s ease-in-out infinite reverse",
-        "pulse-glow": "pulseGlow 3s ease-in-out infinite",
-        "wave": "wave 1.2s ease-in-out infinite",
-        "slide-up": "slideUp 0.4s ease-out",
-        "fade-in": "fadeIn 0.6s ease-out",
-        "spin-slow": "spin 20s linear infinite",
-        "typing": "typing 1.2s ease-in-out infinite",
+        "fade-up": "fadeUp 0.5s ease-out both",
+        "fade-in": "fadeIn 0.4s ease-out both",
+        "slide-up": "slideUp 0.35s cubic-bezier(0.16,1,0.3,1) both",
+        "wave": "wave 1.1s ease-in-out infinite",
+        "pulse-green": "pulseGreen 2s ease-in-out infinite",
       },
       keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0px) rotate(0deg)" },
-          "50%": { transform: "translateY(-30px) rotate(3deg)" },
-        },
-        pulseGlow: {
-          "0%, 100%": { opacity: "0.6", transform: "scale(1)" },
-          "50%": { opacity: "1", transform: "scale(1.05)" },
-        },
-        wave: {
-          "0%, 100%": { transform: "scaleY(0.4)" },
-          "50%": { transform: "scaleY(1)" },
-        },
-        slideUp: {
-          from: { opacity: "0", transform: "translateY(16px)" },
+        fadeUp: {
+          from: { opacity: "0", transform: "translateY(24px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
         fadeIn: {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
-        typing: {
-          "0%, 60%, 100%": { opacity: "0.3", transform: "scale(0.8)" },
-          "30%": { opacity: "1", transform: "scale(1)" },
+        slideUp: {
+          from: { opacity: "0", transform: "translateY(100%)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
-      },
-      backdropBlur: {
-        xs: "2px",
+        wave: {
+          "0%, 100%": { transform: "scaleY(0.3)" },
+          "50%": { transform: "scaleY(1)" },
+        },
+        pulseGreen: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
+        },
       },
     },
   },
